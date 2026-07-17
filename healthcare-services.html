@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. James Hospital Inc.</title>
+    <link rel="stylesheet"href="webstyle.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+    <div class="container header-container">
+
+        <div class="hospital-description">
+
+            <img src="variables/st_james_logo.png" alt="Hospital Logo">
+
+            <div class="hospital-title">
+                <h2>ST. JAMES HOSPITAL INC.</h2>
+                <p>Santa Rosa's Quality Healthcare Service</p>
+                <span>PASYENTE MUNA</span>
+            </div>
+
+        </div>
+
+        <div class="hospital-contact-info">
+
+            <h4>Line Numbers</h4>
+
+            <p>0969-172-2153</p>
+            <p>(OPD) 0960 811 9163</p>
+            <p>(02) 8584-4533</p>
+            <p>(049) 534-1254</p>
+            <p>(049) 502-0058</p>
+
+            <h4>Email</h4>
+
+            <p>info@stjameshospital.com.ph</p>
+
+        </div>
+
+        <div class="hospital-address">
+
+            <h4>Address</h4>
+
+            <p>Dita, City of Sta. Rosa Laguna 4026</p>
+
+            <section class="Gmaps">
+                
+                <div class="right">
+                        <iframe id="map"
+                            src="https://www.google.com/maps?q=St.+James+Hospital,Philippines&output=embed"
+                            width="100%"
+                            height="600"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+</header>
+
+<nav class="navigation">
+
+    <div class="container nav-container">
+
+        <a href="index.html">Home</a>
+        <a class="active" href="healthcare-services.html">Healthcare Services</a>
+        <a href="card.html">Pasyente Muna Card</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+
+    </div>
+
+</nav>
+
+    <main>
+
+    <!-- PAGE TITLE -->
+
+    <section class="healthcare-title">
+
+        <div class="container">
+
+            <h1>HEALTHCARE SERVICES</h1>
+
+            <p>
+                Providing quality healthcare services for every patient.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES IMAGES -->
+
+    <section class="service-section">
+
+        <div class="container">
+
+            <div class="service-images">
+
+                <img src="healthcare images/SERVICES TARP FRONT.jpg"
+                     alt="Services Offered">
+
+                <img src="healthcare images/SERVICES TARP BACK.jpg"
+                     alt="MRI Services">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GREEN TITLE -->
+
+    <section class="facility-title">
+
+        <div class="container">
+
+            <h2>
+                SERVICES, CENTERS & FACILITIES LOCATION
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+
+    <section class="facility-section">
+
+        <div class="container">
+
+            <div class="facility-container">
+
+                <!-- LEFT PANEL -->
+
+                <div class="facility-menu">
+
+    <div class="floor-item active"
+         data-floor="floor4">
+
+        <h3>
+        <i class="fa-regular fa-hospital"></i>
+        4TH FLOOR
+        </h3>
+
+        <ul>
+            <li>Dermatology</li>
+            <li>Electroencephalogram (EEG)</li>
+            <li>Cancer & Infusion Treatment</li>
+            <li>Hemodialysis Unit</li>
+        </ul>
+
+    </div>
+
+    <div class="floor-item"
+         data-floor="floor3">
+
+        <h3>
+        <i class="fa-regular fa-hospital"></i>
+        3RD FLOOR
+        </h3>
+
+        <ul>
+            <li>Eye Care</li>
+            <li>Heart Station</li>
+            <li>ENT</li>
+            <li>Physical Rehabilitation</li>
+        </ul>
+
+    </div>
+
+    <div class="floor-item"
+         data-floor="floor2">
+
+        <h3>
+        <i class="fa-regular fa-hospital"></i>
+        2ND FLOOR
+        </h3>
+
+        <ul>
+            <li>Pulmonary</li>
+            <li>Adult ICU</li>
+            <li>Pediatric ICU</li>
+        </ul>
+
+    </div>
+
+    <div class="floor-item"
+         data-floor="ground">
+
+        <h3>
+        <i class="fa-regular fa-hospital"></i>
+        GROUND FLOOR
+        </h3>
+
+        <ul>
+            <li>24HR Pharmacy</li>
+            <li>Laboratory</li>
+            <li>Ambulance</li>
+            <li>Diagnostic Imaging</li>
+        </ul>
+
+    </div>
+
+</div>
+
+                <!-- RIGHT PANEL -->
+                    <section class="facility-display"> 
+
+                        <div id="facilityContainer">
+                            <!-- CONTENTS IN JAVA SCRIPT -->
+                        </div>
+
+                    </section>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+    <footer>
+
+    <div class="footer-top">
+
+        <div class="container">
+
+            <h3>Is there anything we can help you?</h3>
+
+            <p>
+                Call 0969-172-2153 |
+                Manila Line (02)8584-4533 |
+                Laguna Line (049)534-1254 |
+                (049)502-0058
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-main">
+
+        <div class="container footer-grid">
+
+            <div class="footer-logo">
+
+                <img src="variables/st_james_logo.png">
+
+                <p>© 2022 St. James Hospital Inc.<br>All Rights Reserved.</p>
+
+            </div>
+
+            <div>
+
+                <h4>Navigate</h4>
+
+                <ul>
+
+                    <li>Find a Doctor</li>
+
+                    <li>Pasyente Muna Card</li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>St. James Hospital Inc.</h4>
+
+                <ul>
+
+                    <li>History, Mission & Vision</li>
+
+                    <li>Core Values</li>
+
+                    <li>Gallery</li>
+
+                    <li>About</li>
+
+                </ul>
+
+            </div>
+
+            <div>
+                <p>Visit us her at Dita, City of Sta. Rosa Laguna</p>
+
+                <section class="Gmaps">
+                
+                <div class="right">
+                        <iframe id="map"
+                            src="https://www.google.com/maps?q=St.+James+Hospital,Philippines&output=embed"
+                            width="100%"
+                            height="600"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                </div>
+            </section>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="healthcare.js"></script>
+</body>
+</html>

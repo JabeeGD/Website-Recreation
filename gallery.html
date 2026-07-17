@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. James Hospital Inc.</title>
+    <link rel="stylesheet"href="webstyle.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+    <div class="container header-container">
+
+        <div class="hospital-description">
+
+            <img src="variables/st_james_logo.png" alt="Hospital Logo">
+
+            <div class="hospital-title">
+                <h2>ST. JAMES HOSPITAL INC.</h2>
+                <p>Santa Rosa's Quality Healthcare Service</p>
+                <span>PASYENTE MUNA</span>
+            </div>
+
+        </div>
+
+        <div class="hospital-contact-info">
+
+            <h4>Line Numbers</h4>
+
+            <p>0969-172-2153</p>
+            <p>(OPD) 0960 811 9163</p>
+            <p>(02) 8584-4533</p>
+            <p>(049) 534-1254</p>
+            <p>(049) 502-0058</p>
+
+            <h4>Email</h4>
+
+            <p>info@stjameshospital.com.ph</p>
+
+        </div>
+
+        <div class="hospital-address">
+
+            <h4>Address</h4>
+
+            <p>Dita, City of Sta. Rosa Laguna 4026</p>
+
+            <section class="Gmaps">
+                
+                <div class="right">
+                        <iframe id="map"
+                            src="https://www.google.com/maps?q=St.+James+Hospital,Philippines&output=embed"
+                            width="100%"
+                            height="600"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                </div>
+                
+            </section>
+        </div>
+
+    </div>
+</header>
+
+<nav class="navigation">
+
+    <div class="container nav-container">
+
+        <a href="index.html">Home</a>
+        <a href="healthcare-services.html">Healthcare Services</a>
+        <a href="card.html">Pasyente Muna Card</a>
+        <a class="active" href="Gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+
+    </div>
+
+</nav>
+<main>
+<!-- ================= TITLE ================= -->
+
+<section class="gallery-title">
+
+    <h1>NEW & PREVIOUS EVENTS GALLERY</h1>
+
+</section>
+
+<!-- ================= YEAR BUTTONS ================= -->
+
+<section class="year-tabs">
+
+    <button class="year active">2024</button>
+
+    <button class="year">2023</button>
+
+    <button class="year">2022</button>
+
+    <button class="year">2021</button>
+
+</section>
+
+
+
+
+<section class="gallery-container">
+
+    <!-- Card 1 -->
+
+    <div class="gallery-card" data-year="2024">
+
+        <img src="gallery images/Anniversary.jpg" alt="Anniversary">
+
+        <h3>SJHI 31<sup>ST</sup> ANNIVERSARY CELEBRATION</h3>
+
+        <button>More Details</button>
+
+    </div>
+
+
+    <!-- Card 2 -->
+
+    <div class="gallery-card" data-year="2024">
+
+        <img src="gallery images/DOH Visit.png" alt="DOH Visit">
+
+        <h3>DOH VISIT</h3>
+
+        <button>More Details</button>
+
+    </div>
+
+
+    <!-- Card 3 -->
+
+    <div class="gallery-card" data-year="2024">
+
+        <img src="gallery images/Team Building.png" alt="Department Heads">
+
+        <h3>DEPARTMENT HEADS TEAM BUILDING</h3>
+
+        <button>More Details</button>
+
+    </div>
+
+
+    <!-- Card 4 -->
+
+    <div class="gallery-card" data-year="2024">
+
+        <img src="gallery images/VISITA IGLESIA.png" alt="Visita Iglesia">
+
+        <h3>VISITA IGLESIA</h3>
+
+        <button>More Details</button>
+
+    </div>
+
+    <!-- Card 5 -->
+
+    <div class="gallery-card" data-year="2024">
+
+        <img src="gallery images/Personal Development.png" alt="Personal development">
+
+        <h3>Personal Development</h3>
+
+        <button>More Details</button>
+
+    </div>
+
+    <!-- CALENDAR -->
+</section>
+
+<section class="event-calendar">
+
+    <!-- Title -->
+    <div class="calendar-title">
+
+        <img src="variables/st_james_logo.png" alt="Hospital Logo">
+
+        <h2>St. James Hospital Inc. - Events Calendar</h2>
+
+    </div>
+
+    <!-- Calendar Box -->
+    <div class="calendar-box">
+
+        <!-- Month Navigation -->
+        <div class="calendar-nav">
+
+            <div class="month-display">
+
+                <h2 id="month"></h2>
+                <span id="year"></span>
+
+            </div>
+
+            <div class="calendar-buttons">
+
+                <button id="prevMonth">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <button id="nextMonth">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Weekdays -->
+        <div class="weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+        <!-- Dates -->
+        <div class="days" id="calendarDays"></div>
+
+    </div>
+
+</section>
+
+<!-- Calendar -->
+
+<br>
+</main>
+
+<footer>
+
+    <div class="footer-top">
+        <div class="container">
+            <h3>Is there anything we can help you?</h3>
+            <p>
+                Call 0969-172-2153 |
+                Manila Line (02)8584-4533 |
+                Laguna Line (049)534-1254 |
+                (049)502-0058
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-main">
+        <div class="container footer-grid">
+            <div class="footer-logo">
+                <img src="variables/st_james_logo.png">
+                <p>© 2022 St. James Hospital Inc.<br>All Rights Reserved.</p>
+            </div>
+
+            <div>
+                <h4>Navigate</h4>
+                <ul>
+                    <li>Find a Doctor</li>
+                    <li>Pasyente Muna Card</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>St. James Hospital Inc.</h4>
+                <ul>
+                    <li>History, Mission & Vision</li>
+                    <li>Core Values</li>
+                    <li>Gallery</li>
+                    <li>About</li>
+                </ul>
+            </div>
+
+            <div>
+                <p>Visit us her at Dita, City of Sta. Rosa Laguna</p>
+
+                <section class="Gmaps">
+                
+                <div class="right">
+                        <iframe id="map"
+                            src="https://www.google.com/maps?q=St.+James+Hospital,Philippines&output=embed"
+                            width="100%"
+                            height="600"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                </div>
+            </section>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="gallery.js"></script>
+</body>
+</html>

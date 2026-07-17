@@ -1,0 +1,2289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',Helvetica,sans-serif;
+
+    color:#565656;
+
+    background:#ffffff;
+
+}
+
+/* VARIABLES */
+
+:root{
+
+    --green:#09683A;
+    --gold:#DAA525;
+    --darkBlue:#354294;
+    --lightBlue:#1176BD;
+    --gray:#565656;
+    --white:#ffffff;
+
+}
+
+/* CONTAINER */
+
+.container{
+
+    width:90%;
+
+    max-width:1250px;
+
+    margin:auto;
+
+}
+
+/* HEADER */
+
+header{
+
+    background:white;
+
+    padding:18px 0;
+
+}
+
+.header-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* LOGO */
+
+.hospital-description{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.hospital-description img{
+
+    width:90px;
+
+}
+
+.hospital-title h2{
+
+    color:var(--green);
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.hospital-title p{
+
+    font-size:15px;
+
+    margin:2px 0;
+
+}
+
+.hospital-title span{
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+/* CONTACT */
+
+.hospital-contact-info{
+
+    text-align:center;
+
+}
+
+.hospital-contact-info h4{
+
+    color:var(--green);
+
+    margin-bottom:8px;
+
+    font-size:20px;
+
+}
+
+.hospital-contact-info p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/* ADDRESS */
+
+.hospital-address{
+
+    text-align:center;
+
+}
+
+.hospital-address h4{
+
+    color:var(--green);
+
+    font-size:20px;
+
+}
+
+.hospital-address p{
+
+    margin:8px 0 12px;
+
+    font-size:15px;
+
+}
+
+.hospital-address img{
+
+    width:220px;
+
+    border-radius:10px;
+
+}
+
+/* Google maps header */
+
+.right{
+    width:100%;
+}
+
+#map{
+    width:100%;
+    height:130px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+@media(max-width:900px){
+
+.header-content{
+    flex-direction:column;
+}
+
+.left{
+    width:100%;
+    text-align:center;
+}
+
+.right{
+    width:100%;
+}
+
+#map{
+    height:450px;
+}
+}
+
+/* NAVIGATION */
+
+.navigation{
+
+    background:var(--green);
+
+}
+
+.nav-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:45px;
+
+    height:70px;
+
+}
+
+.navigation a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.3s;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+}
+
+/* ACTIVE BUTTON */
+
+.navigation .active{
+
+    background:var(--gold);
+
+    color:white;
+
+}
+
+/* HOVER */
+
+.navigation a:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+/* --------------------- HOME --------------------- */
+/* HERO SECTION */
+
+.hospital-hero{
+
+    position:relative;
+
+    height:680px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Overlay */
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(218,165,37,.55),
+        rgba(9, 104, 58, 0.35)
+    );
+}
+
+/* Content */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-content h1{
+
+    font-size:50px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+
+}
+
+.hero-content p{
+
+    font-family:Helvetica, sans-serif;
+
+    font-size:24px;
+
+    margin-bottom:45px;
+
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    text-decoration:none;
+
+    color:white;
+
+    border:2px solid white;
+
+    border-radius:50px;
+
+    padding:15px 38px;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:#09683A;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#0b7d46;
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#09683A;
+
+}
+
+/* Arrows */
+
+.hero-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    z-index:5;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.hero-arrow:hover{
+
+    background:#09683A;
+
+}
+
+.hero-arrow.left{
+
+    left:40px;
+
+}
+
+.hero-arrow.right{
+
+    right:40px;
+
+}
+
+/* WELCOME SECTION */
+
+.hospital-welcome{
+
+    background:#1176BD;
+
+    padding:90px 0;
+
+}
+
+.hospital-welcome .container{
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+.hospital-welcome h2{
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.hospital-welcome p{
+
+    color:white;
+
+    font-family:Helvetica,sans-serif;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/* NEWS */
+
+.hospital-news{
+
+    padding:80px 0;
+
+    background:white;
+
+}
+
+.hospital-news h2{
+
+    text-align:center;
+
+    color:#09683A;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.hospital-news> .container> p{
+
+    text-align:center;
+
+    color:#565656;
+
+    font-size:20px;
+
+    margin-bottom:50px;
+
+}
+
+.news-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.news-card{
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.news-card img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 30px rgba(0,0,0,.18);
+
+}
+
+/* HMO SECTION */
+
+.hospital-hmo{
+
+    padding:80px 0;
+
+    background:#fff;
+
+    text-align:center;
+
+}
+
+.hospital-hmo h2{
+
+    color:#09683A;
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.hospital-hmo p{
+
+    color:#565656;
+
+    margin-bottom:40px;
+
+    font-size:20px;
+
+}
+
+.logo-slider{
+
+    overflow:hidden;
+
+    position:relative;
+
+    width:100%;
+
+}
+
+.logo-track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:scrollLogo 35s linear infinite;
+
+}
+
+.logo-track img{
+
+    width:180px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin:0 40px;
+
+
+    transition:.3s;
+
+}
+
+.logo-track img:hover{
+
+    filter:none;
+
+    transform:scale(1.08);
+
+}
+
+@keyframes scrollLogo{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+/* --------------------- END OF HOME --------------------- */
+
+/* --------------------- HEALTHCARE SERVICES --------------------- */
+.healthcare-title{
+    background: #FFFFFF;
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.healthcare-title h1{
+    font-family: Poppins, sans-serif;
+    font-size: 50px;
+    color: #09683A;
+    margin-bottom: 10px;
+}
+
+.healthcare-title p{
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    color: #565656;
+    font-style: italic;
+}
+
+/* TOP IMAGES */
+
+.service-section{
+    padding-bottom: 40px;
+}
+
+.service-images{
+    display: flex;
+    gap: 20px;
+}
+
+.service-images img{
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+    border: 3px solid #DAA525;
+}
+
+/*  GREEN TITLE BAR */
+
+.facility-title{
+    margin-bottom: 40px;
+}
+
+.facility-title h2{
+
+    background:#09683A;
+    color:white;
+
+    text-align:center;
+
+    font-family:Poppins,sans-serif;
+
+    font-size:30px;
+
+    padding:18px;
+
+    border-radius:8px;
+}
+
+/* MAIN LAYOUT */
+
+.facility-container{
+
+    display:flex;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+    margin-bottom:60px;
+}
+
+/* LEFT SIDE */
+
+.facility-menu{
+
+    width:340px;
+
+    background:#f5f5f5;
+
+    border:1px solid #dcdcdc;
+
+    position: sticky;
+
+    top: 80px;   /* Adjust based on your header height */
+
+    align-self: flex-start;
+
+}
+
+.floor-item{
+
+    padding:20px;
+
+    border-bottom:1px solid #d9d9d9;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.floor-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.floor-item:hover{
+
+    background:#1176BD;
+
+    color:white;
+
+}
+
+.floor-item.active{
+
+    background:#DAA525;
+
+    color:white;
+
+    border-left:8px solid #09683A;
+
+}
+
+.floor-item h3{
+
+    color:#09683A;
+
+    margin-bottom:10px;
+
+}
+
+.floor-item.active h3,
+.floor-item:hover h3{
+
+    color:white;
+
+}
+
+.floor-item ul{
+
+    padding-left:18px;
+
+}
+
+.floor-item li{
+
+    margin-bottom:6px;
+
+    font-size:15px;
+
+}
+
+/* RIGHT PANEL */
+
+.facility-display{
+
+    flex:1;
+
+}
+
+#facilityContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+}
+
+.facility-card{
+
+    background:#fff;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+
+}
+
+.facility-card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+}
+
+.facility-card-content{
+
+    padding:30px;
+
+}
+
+.facility-card h2{
+
+    color:#09683A;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+    font-family:Poppins, sans-serif;
+
+}
+
+.facility-card p{
+
+    color:#565656;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    text-align:justify;
+
+}
+
+/* RIGHT PANEL DESCRIPTION */
+
+.facility-info{
+
+    padding-top:25px;
+
+}
+
+.facility-info h2{
+
+    color:#09683A;
+
+    font-size:36px;
+
+    margin-bottom:25px;
+
+    line-height:1.3;
+
+}
+
+.facility-info p{
+
+    color:#565656;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+    text-align:justify;
+
+}
+
+.facility-description{
+    margin-top:20px;
+    color:#565656;
+    font-size:20px;
+    line-height:1.8;
+    text-align:justify;
+}
+
+.facility-description h4{
+    color:#09683A;
+    margin:25px 0 12px;
+    font-size:24px;
+    font-weight:600;
+}
+
+.facility-description ul{
+    margin-left:25px;
+    margin-top:10px;
+}
+
+.facility-description li{
+    margin-bottom:8px;
+}
+
+.facility-info h3{
+
+    color:#09683A;
+
+    font-size:24px;
+
+    margin:35px 0 15px;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .facility-container{
+
+        flex-direction:column;
+
+    }
+
+    .facility-menu{
+
+        width:100%;
+
+    }
+
+    .promo-images{
+
+        flex-direction:column;
+
+    }
+
+    .promo-images img{
+
+        width:100%;
+
+    }
+
+}
+/* --------------------- END OF HEALTHCARE SERVICES --------------------- */
+
+/* --------------------- GALLERY --------------------- */
+.gallery-title{
+
+    text-align:center;
+
+    padding:45px 0 25px;
+
+}
+
+.gallery-title h1{
+
+    color:#09683A;
+
+    font-size:48px;
+
+    font-weight:700;
+
+}
+
+/* YEAR BUTTONS */
+
+.year-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#DAA525;
+
+    width:440px;
+
+    margin:0 auto 60px;
+
+    border-radius:40px;
+
+    padding:6px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.year{
+
+    flex:1;
+
+    background:transparent;
+
+    color:white;
+
+    border:none;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    padding:12px 0;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.year:hover{
+
+    background:#DAA525;
+    color:white;
+
+}
+
+.year.active{
+
+    background:#09683A;
+    color:white;
+
+}
+
+/* GALLERY GRID */
+
+.gallery-container{
+
+    width:90%;
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+/* CARD */
+
+.gallery-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+    text-align:center;
+
+}
+
+.gallery-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.2);
+
+}
+
+.gallery-card img{
+
+    width:100%;
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+.gallery-card h3{
+
+    color:#09683A;
+
+    font-size:24px;
+
+    margin:28px 20px 22px;
+
+    min-height:70px;
+
+}
+
+.gallery-card button{
+
+    margin-bottom:28px;
+
+    background:#DAA525;
+
+    color:white;
+
+    border:none;
+
+    padding:13px 35px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.gallery-card button:hover{
+
+    background:#09683A;
+
+}
+
+/* EVENTS CALENDAR */
+
+.event-calendar{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:100px auto;
+
+}
+
+/* TITLE */
+
+.calendar-title{
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    margin-bottom:35px;
+
+    padding-bottom:25px;
+
+    border-bottom:4px solid #9bc49f;
+
+}
+
+.calendar-title img{
+
+    width:90px;
+
+}
+
+.calendar-title h2{
+
+    color:#09683A;
+
+    font-size:42px;
+
+    font-weight:500;
+
+}
+
+/* BOX */
+
+.calendar-box{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
+
+}
+
+/* MONTH BAR */
+
+.calendar-nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 40px;
+
+}
+
+.month-display h2{
+
+    color:#09683A;
+
+    font-size:52px;
+
+}
+
+.month-display span{
+
+    font-size:30px;
+
+    color:#09683A;
+
+}
+
+/* BUTTONS */
+
+.calendar-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.calendar-buttons button{
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    background:#09683A;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.calendar-buttons button:hover{
+
+    background:#DAA525;
+
+}
+
+/* WEEKDAYS */
+
+.weekdays{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+}
+
+.weekdays div{
+
+    background:#DAA525;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    padding:20px;
+
+}
+
+/* DAYS */
+
+.days{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+}
+
+.day{
+
+    height:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:1px solid #ececec;
+
+    font-size:28px;
+
+    color:#565656;
+
+}
+
+.day.empty{
+
+    background:#fafafa;
+
+}
+
+.day:hover{
+
+    background:#f4f4f4;
+
+}
+
+.today{
+
+    background:#09683A;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.calendar-title{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.calendar-nav{
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.month-display h2{
+
+font-size:40px;
+
+}
+
+.day{
+
+height:80px;
+
+font-size:20px;
+
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.gallery-container{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery-title h1{
+
+font-size:35px;
+
+}
+
+.year-tabs{
+
+flex-wrap:wrap;
+
+}
+
+}
+/* --------------------- END OF GALLERY --------------------- */
+
+/* --------------------- ABOUT --------------------- */
+/* =====================================
+   MISSION & VISION
+=====================================*/
+
+.mission-section,
+.vision-section{
+
+    padding:70px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.section-title h2{
+
+    color:var(--green);
+
+    font-size:42px;
+
+    font-weight:700;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.section-title h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:4px;
+
+    background:var(--gold);
+
+    margin:14px auto 0;
+
+    border-radius:50px;
+
+}
+
+.info-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:55px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.info-card p{
+
+    font-size:19px;
+
+    line-height:2;
+
+    color:#555;
+
+    text-align:justify;
+
+}
+
+/* ================= HISTORY ================= */
+
+.history-section{
+
+    padding:90px 0;
+
+    background:#fff;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    text-align:center;
+
+    margin:70px auto;
+
+    max-width:1100px;
+
+}
+
+.timeline-line{
+
+    position:absolute;
+
+    left:8%;
+
+    right:8%;
+
+    top:20px;
+
+    height:6px;
+
+    background:var(--green);
+
+    z-index:1;
+
+    border-radius:50px;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    z-index:2;
+
+    cursor:pointer;
+
+}
+
+.circle{
+
+    width:42px;
+
+    height:42px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    border:3px solid var(--green);
+
+    background:white;
+
+    transition:.3s ease;
+
+}
+
+.timeline-item.active .circle{
+
+    background:var(--gold);
+
+    border-color:var(--gold);
+
+}
+
+.timeline-item span{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:var(--green);
+
+    font-weight:600;
+
+}
+
+.dot{
+
+    width:14px;
+
+    height:14px;
+
+    margin:15px auto 0;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    opacity:0;
+
+    transition:.35s ease;
+
+}
+
+.timeline-item.active .dot{
+
+    opacity:1;
+
+}
+
+.history-card{
+
+    display:none;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:60px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    max-width:1000px;
+
+    margin:auto;
+
+    text-align:center;
+
+    transition:.4s ease;
+
+}
+
+.history-card h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:4px;
+
+    background:var(--gold);
+
+    margin:18px auto;
+
+    border-radius:30px;
+
+}
+
+.history-card.active{
+
+    display:block;
+
+}
+
+.history-icon{
+
+    width:100px;
+
+    height:100px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+.history-card h3{
+
+    color:var(--green);
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.history-card p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================
+   OUR CORE PROGRAMS
+==========================================*/
+
+.core-programs{
+
+    padding:90px 0;
+
+    background:#ffffff;
+
+}
+
+.core-programs .section-title{
+
+    margin-bottom:70px;
+
+}
+
+/* PROGRAM ROW */
+
+.program-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+    margin-bottom:80px;
+
+}
+
+.program-row.reverse{
+
+    flex-direction:row-reverse;
+
+}
+
+/* IMAGE */
+
+.program-image{
+
+    flex:1;
+
+}
+
+.program-image img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.program-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* TEXT */
+
+.program-text{
+
+    flex:1;
+
+}
+
+.program-text h3{
+
+    color:var(--green);
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.program-text p{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:2;
+
+    text-align:justify;
+
+}
+
+/* Divider */
+
+.program-row:not(:last-child){
+
+    padding-bottom:70px;
+
+    border-bottom:1px solid #e5e5e5;
+
+}
+
+/* ==========================
+   RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+    .program-row,
+    .program-row.reverse{
+
+        flex-direction:column;
+
+        gap:30px;
+
+        text-align:center;
+
+    }
+
+    .program-image{
+
+        width:100%;
+
+    }
+
+    .program-image img{
+
+        height:280px;
+
+    }
+
+    .program-text h3{
+
+        font-size:28px;
+
+    }
+
+    .program-text p{
+
+        text-align:left;
+
+    }
+
+}
+
+/* --------------------- END OF ABOUT --------------------- */
+
+/* FOOTER */
+
+.footer-top{
+
+    background:#354294;
+
+    color:white;
+
+    padding:12px 0;
+
+    text-align:center;
+
+}
+
+.footer-top h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.footer-top p{
+
+    font-size:15px;
+
+}
+
+.footer-main{
+
+    background:#09683A;
+
+    color:white;
+
+    padding:28px 0;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr 1fr 1.2fr;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.footer-grid h4{
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+}
+
+.footer-grid ul{
+
+    list-style:none;
+
+}
+
+.footer-grid li{
+
+    margin-bottom:6px;
+
+    font-size:15px;
+
+}
+
+.footer-logo{
+
+    text-align:center;
+
+}
+
+.footer-logo img{
+
+    width:30px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-logo p{
+
+    font-size:12px;
+
+    line-height:1.4;
+
+    margin-top:10px;
+
+}
+
+.footer-grid p{
+
+    font-size:15px;
+
+}
+
+.footer-grid img{
+
+    width:150px;
+
+    margin-top:10px;
+
+}
+
+/* ======================================================
+                PASYENTE MUNA CARD
+======================================================*/
+
+.pasyente-muna-card{
+    width:90%;
+    max-width:1300px;
+    margin:45px auto 70px;
+}
+
+.pasyente-muna-card h1{
+    text-align:center;
+    color:var(--green);
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+.pasyente-muna-card-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+/* BOTH BOXES */
+
+.pasyente-muna-signup,
+.pasyente-muna-card-info{
+
+    background:#fafcf9;
+
+    border-radius:22px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    padding:35px;
+
+}
+
+/* LEFT SIDE */
+
+.pasyente-muna-signup img{
+
+    width:70px;
+
+    display:inline-block;
+
+    vertical-align:middle;
+
+}
+
+.pasyente-muna-signup h2{
+
+    display:inline-block;
+
+    margin-left:15px;
+
+    vertical-align:middle;
+
+    color:#111;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    border-bottom:1px solid #cfcfcf;
+
+    padding-bottom:10px;
+
+    width:calc(100% - 100px);
+
+}
+
+.signup-form{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.signup-form label{
+
+    color:#111;
+
+    margin-bottom:8px;
+
+    margin-top:18px;
+
+    font-size:18px;
+
+}
+
+.signup-form input{
+
+    height:56px;
+
+    border:1px solid #cfcfcf;
+
+    border-radius:5px;
+
+    padding:0 15px;
+
+    font-size:17px;
+
+    font-family:Poppins,sans-serif;
+
+    outline:none;
+
+}
+
+.signup-form input:focus{
+
+    border-color:var(--green);
+
+}
+
+.signup-form p{
+
+    margin-top:8px;
+
+    color:#777;
+
+    font-size:14px;
+
+    font-style:italic;
+
+}
+
+/* PASSWORD */
+
+.password-box{
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid #cfcfcf;
+
+    border-radius:5px;
+
+    overflow:hidden;
+
+}
+
+.password-box input{
+
+    border:none;
+
+    flex:1;
+
+}
+
+.password-box input:focus{
+
+    border:none;
+
+}
+
+.toggle-password{
+
+    width:60px;
+
+    height:56px;
+
+    border:none;
+
+    background:#f2f2f2;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:#444;
+
+    border-left:1px solid #cfcfcf;
+
+}
+
+.toggle-password:hover{
+
+    background:#e9e9e9;
+
+}
+
+.signup-form button[type="submit"]{
+
+    margin-top:30px;
+
+    background:var(--green);
+
+    color:white;
+
+    border:none;
+
+    height:55px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.signup-form button[type="submit"]:hover{
+
+    background:#0b7d46;
+
+}
+
+.pasyente-muna-signup>a{
+
+    display:block;
+
+    text-align:right;
+
+    margin-top:20px;
+
+    color:#1176BD;
+
+    font-size:17px;
+
+}
+
+/* RIGHT SIDE */
+
+.pasyente-muna-card-info{
+
+    text-align:center;
+
+}
+
+.pasyente-muna-card-info h2{
+
+    color:#111;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.pasyente-muna-card-info img{
+
+    width:100%;
+
+    border:3px solid #eef4ee;
+
+    border-radius:5px;
+
+    margin-bottom:25px;
+
+}
+
+.pasyente-muna-card-info h3{
+
+    color:#111;
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+    text-align:left;
+
+}
+
+.benefits{
+
+    text-align:left;
+
+    margin-left:22px;
+
+    line-height:2;
+
+    font-size:19px;
+
+    color:#333;
+
+}
+
+.pasyente-muna-card-info>p{
+
+    margin-top:30px;
+
+    text-align:justify;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .pasyente-muna-card-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .pasyente-muna-signup h2{
+
+        width:auto;
+
+        display:block;
+
+        margin:15px 0 0;
+
+        border:none;
+
+    }
+
+}
